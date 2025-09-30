@@ -1,5 +1,8 @@
 import { ArrowRight, Truck, Shield, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroTruckMain from "@/assets/hero-truck-main.jpg";
+import deliveryVan from "@/assets/delivery-van.jpg";
+import largeTruck from "@/assets/large-truck.jpg";
 
 const Hero = () => {
   return (
@@ -50,40 +53,53 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Features Cards */}
+          {/* Hero Truck Image & Features */}
           <div className="space-y-6">
-            <div className="bg-card/90 backdrop-blur-sm rounded-lg p-6 shadow-card">
-              <div className="flex items-center space-x-4">
-                <div className="bg-accent/10 p-3 rounded-lg">
-                  <Truck className="h-6 w-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-card-foreground">Modern Fleet</h3>
-                  <p className="text-sm text-muted-foreground">State-of-the-art vehicles equipped with GPS tracking</p>
-                </div>
-              </div>
+            {/* Main Truck Image */}
+            <div className="relative rounded-lg overflow-hidden shadow-primary">
+              <img 
+                src={heroTruckMain} 
+                alt="Truckjay professional transport vehicle" 
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
             </div>
 
-            <div className="bg-card/90 backdrop-blur-sm rounded-lg p-6 shadow-card">
-              <div className="flex items-center space-x-4">
-                <div className="bg-accent/10 p-3 rounded-lg">
-                  <Shield className="h-6 w-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-card-foreground">Fully Insured</h3>
-                  <p className="text-sm text-muted-foreground">Comprehensive coverage for complete peace of mind</p>
+            {/* Feature Cards */}
+            <div className="grid grid-cols-1 gap-4">
+              <div className="bg-card/90 backdrop-blur-sm rounded-lg p-6 shadow-card">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-accent/10 p-3 rounded-lg">
+                    <Truck className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-card-foreground">Modern Fleet</h3>
+                    <p className="text-sm text-muted-foreground">State-of-the-art vehicles equipped with GPS tracking</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="bg-card/90 backdrop-blur-sm rounded-lg p-6 shadow-card">
-              <div className="flex items-center space-x-4">
-                <div className="bg-accent/10 p-3 rounded-lg">
-                  <Clock className="h-6 w-6 text-accent" />
+              <div className="bg-card/90 backdrop-blur-sm rounded-lg p-6 shadow-card">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-accent/10 p-3 rounded-lg">
+                    <Shield className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-card-foreground">Fully Insured</h3>
+                    <p className="text-sm text-muted-foreground">Comprehensive coverage for complete peace of mind</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-card-foreground">On-Time Delivery</h3>
-                  <p className="text-sm text-muted-foreground">99.5% on-time delivery rate guaranteed</p>
+              </div>
+
+              <div className="bg-card/90 backdrop-blur-sm rounded-lg p-6 shadow-card">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-accent/10 p-3 rounded-lg">
+                    <Clock className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-card-foreground">On-Time Delivery</h3>
+                    <p className="text-sm text-muted-foreground">99.5% on-time delivery rate guaranteed</p>
+                  </div>
                 </div>
               </div>
             </div>

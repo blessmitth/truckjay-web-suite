@@ -1,6 +1,8 @@
 import Navigation from "@/components/ui/navigation";
 import { Package, Truck, Users, Clock, Shield, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import deliveryVan from "@/assets/delivery-van.jpg";
+import largeTruck from "@/assets/large-truck.jpg";
 
 const Services = () => {
   const services = [
@@ -101,6 +103,50 @@ const Services = () => {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Fleet Showcase */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Our Professional Fleet
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Modern, well-maintained vehicles equipped with the latest technology to ensure your cargo arrives safely and on time.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="relative rounded-lg overflow-hidden shadow-card">
+              <img 
+                src={deliveryVan} 
+                alt="Modern delivery van for local services"
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end">
+                <div className="p-6 text-primary-foreground">
+                  <h3 className="text-xl font-bold mb-2">Local Delivery Vans</h3>
+                  <p className="text-primary-foreground/90">Perfect for urban deliveries and express services</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative rounded-lg overflow-hidden shadow-card">
+              <img 
+                src={largeTruck} 
+                alt="Large articulated truck for long distance transport"
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end">
+                <div className="p-6 text-primary-foreground">
+                  <h3 className="text-xl font-bold mb-2">Long Distance Trucks</h3>
+                  <p className="text-primary-foreground/90">Heavy-duty vehicles for nationwide transport</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
